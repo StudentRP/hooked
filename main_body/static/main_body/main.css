@@ -1,3 +1,24 @@
-* {
-    color: darkblue;
+/** {*/
+/*    color: darkblue;*/
+/*}*/
+
+.my_header {
+    text-align: center;
+}
+
+/*nav div {*/
+/*    position: fixed;*/
+/*}*/
+
+body nav{
+    border: red;
+}
+
+.navbar .nav .nav-item .nav-link:hover {
+    color: green;
+}
+
+.navbar {
+    position: center;
+    border: 3px solid #73AD21;
 }
