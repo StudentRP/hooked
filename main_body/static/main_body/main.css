@@ -2,23 +2,41 @@
     color: darkblue !important;
 }
 
+header{
+    background: url("../site_img/trout.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.trans {
+    opacity: 0.4;
+    filter: alpha(opacity = 40)
+}
+
+
 .my_header, aside {
     text-align: center;
 }
 
 
 aside, section{
-    border: 3px solid red;
+    background-color: #d5dee3;
+    /*border: 3px solid red;*/
     margin-top: 50px;
+    padding: 50px;
 }
 
-.nav-link:hover {
+
+.nav-item .nav-link {
+    font-size: 25px
+
+}
+
+.nav-item .nav-link:hover {
     color: purple !important;
 }
 
 .navbar {
-    position: center !important; /* not working */
-    border: 3px solid #73AD21;
+    /*border: 3px solid #73AD21;*/
 }
 
 #navbarNavDropdown ul{
@@ -36,6 +54,8 @@ aside, section{
     font-family: "Times New Roman", Times, serif;
     font-size: 40px;
     color: black !important;
+    /*opacity: 1;*/
+
 }
 
 .my_header #site_header {

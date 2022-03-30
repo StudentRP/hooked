@@ -19,7 +19,7 @@
 </head>
 <body class="container pl-3">
     <div class="container pt-3">
-        <header class="my_header">
+        <header class="my_header trans">
             <h1 id="site_header">HooKed</h1>
             <p><strong id="sub_header">Trout fishing</strong></p>
         </header>
@@ -30,7 +30,7 @@
 
           <div id="fish">
             <a class="navbar-brand mr-4" href="{% url 'mb-home'%}">
-            <img src="{% static "site_img/fish.png" %}" alt="pic of fish" width="40" height="34"></a>
+            <img src="{% static "site_img/fish.png" %}" alt="pic of fish" width="55" height="45"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -42,10 +42,10 @@
               <a class="nav-link active" aria-current="page" href="#">Blog</a>
             </li-->
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'mb-features' %}">Features</a>
+              <a class="nav-link nav_feature" href="{% url 'mb-features' %}">Features</a>
             </li>
               <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{% url 'mb-equipment' %}" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle nav_feature" href="{% url 'mb-equipment' %}" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Equipment
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
