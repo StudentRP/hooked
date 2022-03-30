@@ -1,24 +1,46 @@
-/** {*/
-/*    color: darkblue;*/
-/*}*/
+* {
+    color: darkblue !important;
+}
 
-.my_header {
+.my_header, aside {
     text-align: center;
 }
 
-/*nav div {*/
-/*    position: fixed;*/
-/*}*/
 
-body nav{
-    border: red;
+aside, section{
+    border: 3px solid red;
+    margin-top: 50px;
 }
 
-.navbar .nav .nav-item .nav-link:hover {
-    color: green;
+.nav-link:hover {
+    color: purple !important;
 }
 
 .navbar {
-    position: center;
+    position: center !important; /* not working */
     border: 3px solid #73AD21;
+}
+
+#navbarNavDropdown ul{
+    /*border:3px solid orangered !important;*/
+    width: 70%; /*  provides centering of the nav*/
+    margin: auto;
+}
+
+.home_page_welcome p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
+.my_header #sub_header {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    color: black !important;
+}
+
+.my_header #site_header {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 50px;
+    color: black !important;
+
 }
