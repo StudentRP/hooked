@@ -2,19 +2,27 @@
     color: darkblue !important;
 }
 
+/*image opaque changes to .5 while text remains un-faded. note top faed value, bot fade value */
 header{
     background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../site_img/trout.jpg");
     /*background: url("../site_img/trout.jpg");*/
     background-repeat: no-repeat;
     background-position: center;
     /*background-size: auto;*/
-
 }
+
+/*hides the aside block when screen shrinks*/
+@media only screen and (max-width: 995px) {
+    aside {
+        display: none;
+    }
+}
+
+
 
 .my_header, aside {
     text-align: center;
 }
-
 
 aside, section{
     background-color: #d5dee3;
@@ -35,7 +43,7 @@ aside, section{
 
 }
 
-.nav-item .nav-link:hover {
+.navbar-nav .nav-item:hover, .nav-item .nav-link:hover {
     color: mediumpurple !important;
 
 }
@@ -71,4 +79,9 @@ aside, section{
     font-size: 50px;
     color: black !important;
 
+}
+
+.my_nav #user-access {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 5px;
 }
