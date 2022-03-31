@@ -3,15 +3,13 @@
 }
 
 header{
-    background: url("../site_img/trout.jpg");
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../site_img/trout.jpg");
+    /*background: url("../site_img/trout.jpg");*/
     background-repeat: no-repeat;
     background-position: center;
-}
-.trans {
-    opacity: 0.4;
-    filter: alpha(opacity = 40)
-}
+    /*background-size: auto;*/
 
+}
 
 .my_header, aside {
     text-align: center;
@@ -21,28 +19,39 @@ header{
 aside, section{
     background-color: #d5dee3;
     /*border: 3px solid red;*/
+    border-radius: 15px;
     margin-top: 50px;
+    margin-left: 25px;
     padding: 50px;
+
 }
 
+#fish {
+    margin-left: 25px;
+}
 
 .nav-item .nav-link {
-    font-size: 25px
+    font-size: 25px;
 
 }
 
 .nav-item .nav-link:hover {
-    color: purple !important;
+    color: mediumpurple !important;
+
 }
 
 .navbar {
     /*border: 3px solid #73AD21;*/
 }
 
+
 #navbarNavDropdown ul{
     /*border:3px solid orangered !important;*/
-    width: 70%; /*  provides centering of the nav*/
-    margin: auto;
+    width: 70%; /*  width of the inline element*/
+    margin: auto; /*  margin from top*/
+    margin-left: 8%;
+
+
 }
 
 .home_page_welcome p {
@@ -54,7 +63,6 @@ aside, section{
     font-family: "Times New Roman", Times, serif;
     font-size: 40px;
     color: black !important;
-    /*opacity: 1;*/
 
 }
 

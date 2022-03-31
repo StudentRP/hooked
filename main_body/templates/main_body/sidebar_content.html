@@ -1,0 +1,21 @@
+{% extends "main_body/base.html" %}
+
+{# not working yet#}
+
+{% block sidebar %}
+    <h3>Up and Coming</h3>
+    <p class='text-muted'>Look out for:
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-light">Latest News</li>
+        <li class="list-group-item list-group-item-light">Announcements</li>
+        <li class="list-group-item list-group-item-light">Calendars</li>
+        <li class="list-group-item list-group-item-light">Events</li>
+      </ul>
+    </p>
+{% endblock sidebar %}
+
+
+{# Templating must be inner flow as in a->b->c (c inherits from b and b inherits from a)#}
+{# NOT #}
+{# Forked = a->b & a->c (c inherits from a but wants content from c in b) in other words a cant do a look up of c content #}
+{#before running the page for b#}
