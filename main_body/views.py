@@ -12,6 +12,10 @@ class Home(View): # class based view seems to be working
     def get(self, request):
         return render(request, "main_body/home.html", {'title': 'Home'})
 
+class News(View): # class based view seems to be working
+    def get(self, request):
+        return render(request, "main_body/news.html", {'title': 'News'})
+
 
 def equipment(request):
     return render(request, 'main_body/equipment.html', {'title': 'Equipment'})
