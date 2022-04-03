@@ -16,11 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from users import views as user_views # redefine it as may want to import several different views
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', user_views.register, name='register'), # strait to the function in views bypassing urls
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'), # django's default classed based views will handle forms and logic but need own templates
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),# template_name='users/login.html' is to change path from the default templates/registration/login.html format
+    path('profile/', user_views.profile, name='profile'),
     path('', include('main_body.urls')), # sends to main_body urls for lookup that contains the app specific urls
-
 ]

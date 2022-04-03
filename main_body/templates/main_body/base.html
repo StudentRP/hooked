@@ -69,10 +69,10 @@
         </div>
             <div class="navbar-nav"> <!-- changes the view dependent upon logged in or out -->
                 {% if user.is_authenticated %}
-                    <a class="nav-item nav-link" href="#">Logout</a>
-                    <a class="nav-item nav-link" href="#">Profile</a>
+                    <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                    <a class="nav-item nav-link" href="{% url 'profile'%}">Profile</a>
                 {% else %}
-                    <a class="nav-item nav-link" href="#">Login</a> <!-- # place holder for dead links (use to be where 'login' was-->
+                    <a class="nav-item nav-link" href="{% url 'login' %}">Login</a> <!-- # place holder for dead links (use to be where 'login' was-->
                     <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
 
                 {% endif %}
