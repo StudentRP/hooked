@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'crispy_forms',
     'users.apps.UsersConfig', # for user removing access to admin login
     'main_body.apps.MainBodyConfig', # main components of the site
     'django.contrib.admin',
@@ -121,6 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4' # ensures crispy forms uses bs 4 not 2
 
 MEDIA_URL = '/media/' # need to check this and make  work with the fish image for the site
 
