@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from users import views as user_views # redefine it as may want to import several different views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main_body.urls'))
+    path('register/', user_views.register, name='register'), # strait to the function in views bypassing urls
+    path('', include('main_body.urls')), # sends to main_body urls for lookup that contains the app specific urls
+
 ]

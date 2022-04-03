@@ -33,7 +33,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'main_body.apps.MainBodyConfig',
+    'users.apps.UsersConfig', # for user removing access to admin login
+    'main_body.apps.MainBodyConfig', # main components of the site
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

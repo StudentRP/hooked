@@ -1,8 +1,8 @@
 {% extends "main_body/sidebar_content.html" %}
 
     {% block content %}
-    {% if news %}
-            {% for post in news %}
+    {% if announcements  %}
+            {% for post in announcements %}
                 <article class="media content-section">
                     <div class="media-body">
                         <div class="article-metadata">
@@ -18,7 +18,7 @@
         <article class="media content-section">
             <div class="media-body">
                 <div class="article-metadata">
-                    <p>No news currently</p>
+                    <p>No Announcements currently</p>
                 </div>
             </div>
         </article>
