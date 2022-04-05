@@ -8,3 +8,5 @@ class UsersConfig(AppConfig):
     def ready(self):
         """captures signals"""
         import users.signals
+
+
