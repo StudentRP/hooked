@@ -125,7 +125,8 @@ STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4' # ensures crispy forms uses bs 4 not 2
 
-MEDIA_URL = '/media/' # need to check this and make work with the fish image for the site
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # regardless of os the path will resolve and to the media folder.
+MEDIA_URL = '/media/' # how its accessed through the url
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -135,3 +136,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'mb-home' # changes the location where the user is logged into default is accounts/profile!
 
 LOGIN_URL = 'login' # if access control in place need location to route user after failed access as will call error
+
+

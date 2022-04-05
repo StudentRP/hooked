@@ -3,15 +3,17 @@
 {# not working yet#}
 
 {% block sidebar %}
+
     <h3>Up and Coming</h3>
-    <p class='text-muted'>Look out for:
-      <ul class="list-group">
-        <li class="list-group-item"><a href="{% url 'mb-news' %}">Latest News</a></li>
-        <li class="list-group-item"><a href="{% url 'mb-announcements' %}">Announcements</a></li>
-        <li class="list-group-item"><a href="#">Calendars</a></li>
-        <li class="list-group-item"><a href="#">Events</a></li>
-      </ul>
-    </p>
+    <p class='text-muted'>Look out for:</p>
+
+    <ul class="list-group">
+        <li class="list-group-item mb-2"><a href="{% url 'mb-news' %}">Latest News</a></li>
+        <li class="list-group-item mb-2"><a href="{% url 'mb-announcements' %}">Announcements</a></li>
+        <li class="list-group-item mb-2"><a href="#">Calendars</a></li>
+        <li class="list-group-item mb-2"><a href="#">Events</a></li>
+    </ul>
+
 {% endblock sidebar %}
 
 

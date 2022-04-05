@@ -57,7 +57,7 @@ aside, section{
     /*border:3px solid orangered !important;*/
     width: 70%; /*  width of the inline element*/
     margin: auto; /*  margin from top*/
-    margin-left: 8%;
+    /*margin-left: 5%;*/
 
 
 }
@@ -84,4 +84,12 @@ aside, section{
 .my_nav #user-access {
     font-family: "Times New Roman", Times, serif;
     font-size: 5px;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
 }
