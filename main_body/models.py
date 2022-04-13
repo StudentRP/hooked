@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse # for view redirection on CreateNews
 
 
 class News(models.Model):
@@ -11,6 +12,10 @@ class News(models.Model):
     def __str__(self):
         return self.title
 
+    # def get_absolute_url(self):
+    #     """required meth for url redirect after news creation."""
+    #     return reverse("mb-news")
+
 
 class Announcements(models.Model):
     title = models.CharField(max_length=100)
@@ -20,6 +25,12 @@ class Announcements(models.Model):
 
     def __str__(self):
         return self.title
+
+
+
+
+
+
 
 """
 Note: when querying the shell User.objects.filter(username='rory') will return a query set object and NOT the 

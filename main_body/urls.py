@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import CreateNews
 # from django.contrib.auth.decorators import login_required # for cbv authentication
 
 
@@ -12,4 +13,5 @@ urlpatterns = [
     # path('news/', login_required(views.News.as_view(), login_url='login')), # not working yet
     path('announcements/', views.Announcements.as_view(), name='mb-announcements'),
     path('', views.Home.as_view(), name='mb-home'), # needs to be last looked in as slower return factor
+    path('createnews', CreateNews.as_view(), name='mb-news-create')
 ]

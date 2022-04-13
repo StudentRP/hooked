@@ -6,6 +6,7 @@ from django.contrib.auth.forms import UserCreationForm # old: standard user form
 from django.contrib import messages # used for the 1 time flash messages
 from .forms import MyUserRegisterForm
 from django.contrib.auth.decorators import login_required # login required to see requests
+from .forms import UserUpdateForm, ProfileUpdateForm
 
 
 def register(request):
@@ -13,7 +14,7 @@ def register(request):
     if request.method == 'POST':
         form = MyUserRegisterForm(request.POST) # populated form
         if form.is_valid(): # django UserCreationForm does all checks to see if form is valid
-            form.save() # saves to django's user model db
+            form.save() # saves to django's user model db. This action also sends a signal picked up by a receiver (post_save)
             username = form.cleaned_data.get('username') # gets username from the cleaned data dict
             messages.success(request, f'Account created for {username}. You can now login.') # creates a success message
             return redirect('login') # redirects the user to the home screen
@@ -24,5 +25,10 @@ def register(request):
 
 @login_required
 def profile(request):
-    return render(request, 'users/profile.html')
+    u_form = UserUpdateForm()
+    p_form = ProfileUpdateForm
+
+    context = {'u_form': u_form, 'p_form': p_form }
+
+    return render(request, 'users/profile.html', context)
 

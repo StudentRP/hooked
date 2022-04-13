@@ -1,12 +1,15 @@
 {% extends "main_body/sidebar_content.html" %}
 
     {% block content %}
+        <div class="mb-4">
+            <a class="text-muted" href="{% url 'mb-news-create'%}"> Create Post</a>
+        </div>
     {% if news %}
-            {% for post in news %}
+            {% for post in news reversed %}
                 <article class="media content-section">
                     <div class="media-body">
                         <div class="article-metadata">
-                            <small class="text-muted">{{ post.date_posted|date:"d F, Y" }} by {{ post.author}}</small>
+                            <small class="text-muted">{{ post.date_posted|date:"d F, Y"}} by {{ post.author}}</small>
                         </div>
                         <h2>{{ post.title }}</h2>
                         <p class="article-content">{{ post.content }}</p>
@@ -22,5 +25,6 @@
             </div>
         </article>
     {% endif %}
+
 
 {% endblock content %}
