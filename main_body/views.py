@@ -24,11 +24,11 @@ class CreateNews(CreateView):
     """dj view that save the creation of a form"""
     model = Mb_News # which db relates to
     fields = ['title', 'content'] # fields of interest
-    # success_url = '/news/' # replacement for models get_absolute_url meth! (3 ways to do redirect, this looks cleaner)
+    # success_url = '/news/' # replacement for models get_absolute_url meth! (3 ways to do redirect, this, reverse_lazy & models get_absolute_url)
     success_url = reverse_lazy('mb-news') # url back ref name
 
     def form_valid(self, form):
-        """defaults the author to the current user"""
+        """Defaulting the author to the current user . Must override form_valid from parent to assign author (docs pg 317)"""
         form.instance.author = self.request.user # sets the current logged in user as the author
         return super().form_valid(form) # recalls the validate method
 
